@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root{
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+}
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    background-color: var(--main-BG);
+    font-family: 'Outfit', sans-serif;
+}
+.container{
+    margin: 40px auto;
+    width: 337px;
+    height: 600px;
+    background-color: var(--card-BG);
+    border-radius: 20px;
+    padding: 20px;
+}
+.content img{
+    max-width: 100%;
+    border-radius: 7px;
+}
+.content{
+    position: relative;
+}
+.content div{
+    position: absolute ;
+    height: calc(100% - 4px);
+    width: 100%;
+    background-color: hsl(178, 100%, 50%, 60%);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.7s ease-in-out;
+    border-radius: 7px;
+}
+
+.container .content div img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container .content div:hover{
+    opacity: 100%;
+    cursor: pointer;
+}
+h2{
+    color: var(--White);
+    font-weight: 600;
+    padding: 20px 0;
+}
+p{
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--Soft-blue);
+    padding-right: 12px;
+}
+.other{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.price{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 15px;
+}
+.price > p{
+    color: var(--Cyan);
+}
+.days{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    gap: 7px;
+}
+.line{
+    background-color: var(--line);
+    height: 1px;
+    width: 100%;
+}
+.creator{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 25px;
+}
+.creator img{
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+}
+.creator span{
+    color: var(--White);
+    font-weight: 400;
+}
+@media screen and (max-width:375px){
+    body{
+        overflow: hidden;
+    }
+    .container{
+        margin: 30px auto;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .container{
+        width: 400px;
+        height: auto;
+    }
+}
